@@ -209,6 +209,7 @@ impl Window {
             .with_title(title)
             .with_visibility(false)
             .with_transparency(true)
+            .with_maximized(true)
             .with_decorations(window_config.decorations());
         let window = create_gl_window(window.clone(), &event_loop, false)
             .or_else(|_| create_gl_window(window, &event_loop, true))?;
